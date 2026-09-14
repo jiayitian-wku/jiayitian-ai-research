@@ -1,61 +1,88 @@
-# Secrets and credentials
+# Secrets and local environment files
 .env
 .env.*
 !.env.example
-*.key
 *.pem
+*.key
 *.p12
 *.pfx
-secrets.*
+.envrc
+credentials*.json
 credentials.*
+secrets/
+secret/
+secrets.*
+*api_key*
+*apikey*
+*API_KEY*
+*APIKEY*
+*api-key*
+*API-KEY*
+*api key*
+*API Key*
 
-# Python environments and caches
-.venv/
-venv/
-env/
+# Model weights and checkpoints
+models/
+model_weights/
+weights/
+checkpoints/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.gguf
+*.onnx
+*.bin
+
+# Datasets and large data artifacts
+data/
+datasets/
+*.parquet
+*.arrow
+
+# PDFs (Git cannot ignore by file size, so all local PDFs are excluded)
+*.pdf
+
+# Temporary experiment outputs
+experiments/**/outputs/
+experiments/**/runs/
+experiments/**/tmp/
+experiments/**/temp/
+results/raw/
+results/**/raw/
+results/tmp/
+outputs/
+runs/
+work/
+wandb/
+mlruns/
+tensorboard/
+*.log
+
+# Language and tool caches
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-
-# Large models and checkpoints
-models/
-model_weights/
-checkpoints/
-*.bin
-*.ckpt
-*.gguf
-*.onnx
-*.pt
-*.pth
-*.safetensors
-
-# Datasets
-data/
-datasets/
-
-# Temporary experiment artifacts
-tmp/
-temp/
-.cache/
-work/
-outputs/
-experiments/**/tmp/
-experiments/**/temp/
-results/**/raw/
-wandb/
-mlruns/
-runs/
-*.log
-*.tmp
-*.swp
-
-# Notebook checkpoints
 .ipynb_checkpoints/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+node_modules/
 
-# Editors and system files
+# Editors, operating systems, and temporary files
 .DS_Store
+._*
 Thumbs.db
 .idea/
 .vscode/
+*.swp
+*.swo
+*.tmp
+*~
+.cache/
+tmp/
+temp/
